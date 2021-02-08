@@ -7,12 +7,7 @@ export default function markup(data) {
 
   return refs.gallery.insertAdjacentHTML(
     'beforeend',
-
-    data.hits
-      .map(image => {
-        console.log(data.hits);
-        return imgTemplate(image);
-      })
-      .join(''),
+    imgTemplate(data.hits)
+    
   );
 }
